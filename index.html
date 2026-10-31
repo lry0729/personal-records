@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人记录 - 刘瑞阳</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>我的个人记录</h1>
+    <nav>
+      <button class="nav-btn active" data-tab="diary">日记</button>
+      <button class="nav-btn" data-tab="todo">待办</button>
+      <button class="nav-btn" data-tab="goals">目标</button>
+    </nav>
+  </header>
+  <main>
+    <section id="diary" class="tab-content active">
+      <h2>日记</h2>
+      <form id="diary-form" class="form">
+        <input type="text" id="diary-title" placeholder="标题" required>
+        <textarea id="diary-content" placeholder="今天发生了什么..." rows="4" required></textarea>
+        <button type="submit">保存日记</button>
+      </form>
+      <div id="diary-list" class="list"></div>
+    </section>
+    <section id="todo" class="tab-content">
+      <h2>待办</h2>
+      <form id="todo-form" class="form">
+        <input type="text" id="todo-text" placeholder="添加新待办..." required>
+        <button type="submit">添加</button>
+      </form>
+      <div id="todo-list" class="list"></div>
+    </section>
+    <section id="goals" class="tab-content">
+      <h2>目标</h2>
+      <form id="goal-form" class="form">
+        <input type="text" id="goal-title" placeholder="目标标题" required>
+        <textarea id="goal-desc" placeholder="描述..." rows="2"></textarea>
+        <input type="number" id="goal-progress" placeholder="进度 %" min="0" max="100" value="0">
+        <button type="submit">添加目标</button>
+      </form>
+      <div id="goal-list" class="list"></div>
+    </section>
+  </main>
+  <footer>
+    <p>数据保存在浏览器本地，刷新不丢失。欢迎后续扩展小软件。</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
